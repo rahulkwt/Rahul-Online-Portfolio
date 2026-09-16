@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Warm-neutral ink ground with a single ochre accent — the highlighter used to
+   flag a variance on an audit sheet. Committed dark identity. */
+@layer base {
+  :root {
+    color-scheme: dark;
+
+    --ink: 30 9% 5%;
+    --surface: 30 8% 8%;
+    --raised: 30 7% 11%;
+    --line: 32 7% 18%;
+    --fg: 36 18% 94%;
+    --muted: 34 8% 62%;
+    --accent: 37 79% 57%;
+    --accent-soft: 36 62% 78%;
+  }
+
+  * {
+    border-color: hsl(var(--line));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-ink font-sans text-fg antialiased;
+    background-image:
+      radial-gradient(60rem 40rem at 78% -8%, hsl(var(--accent) / 0.09), transparent 60%),
+      radial-gradient(44rem 34rem at 4% 12%, hsl(36 40% 40% / 0.06), transparent 62%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.28);
+    color: hsl(var(--fg));
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-eyebrow uppercase text-muted;
+  }
+
+  /* Hairline that reads as a measured rule rather than a generic divider. */
+  .rule {
+    @apply h-px w-full bg-gradient-to-r from-line via-line to-transparent;
+  }
+
+  .figure {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  }
+}
