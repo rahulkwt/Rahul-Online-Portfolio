@@ -44,8 +44,8 @@ export function Contact() {
     <Section
       id="contact"
       eyebrow="Contact"
-      title={<>Hiring for Summer 2026 or a December 2026 start?</>}
-      lede="I graduate in December 2026 and I'm looking for software and data roles. Houston-based, open to relocation — email is the fastest way to reach me."
+      title={<>Hiring interns or full-time engineers?</>}
+      lede={`I'm looking for Summer 2027 internships and full-time software and data roles. I graduate from the University of Houston in ${profile.graduation}. Houston-based, open to relocation — email is the fastest way to reach me.`}
     >
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-6">
         <Reveal className="min-w-0">

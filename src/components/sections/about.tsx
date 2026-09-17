@@ -27,7 +27,8 @@ export function About() {
           </p>
           <p>
             I started at Houston Community College, transferred to the University of Houston, and
-            graduate in December 2026. I&apos;m based in Houston and open to relocating.
+            graduate in {profile.graduation}. I&apos;m based in Houston and open to relocating —
+            currently looking for Summer 2027 internships and full-time roles.
           </p>
         </Reveal>
 

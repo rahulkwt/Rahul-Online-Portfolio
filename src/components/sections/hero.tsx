@@ -51,12 +51,12 @@ export function Hero() {
           {/* ---------- Copy ---------- */}
           <div>
             <motion.div {...rise(0)} className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <span className="inline-flex items-center gap-2 rounded-full border border-line bg-raised/70 px-3 py-1.5 font-mono text-eyebrow uppercase text-accent-soft">
+              <span className="inline-flex items-center gap-2 rounded-full border border-line bg-raised/70 px-3 py-1.5 font-mono text-eyebrow uppercase leading-[1.5] text-accent-soft">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
                 </span>
-                Open to 2026 new-grad roles
+                {profile.seeking}
               </span>
               <span className="inline-flex items-center gap-1.5 font-mono text-eyebrow uppercase text-muted">
                 <MapPin className="h-3 w-3" aria-hidden="true" />
@@ -77,7 +77,7 @@ export function Hero() {
               {...rise(0.16)}
               className="mt-6 max-w-prose text-lg leading-relaxed text-muted sm:text-xl"
             >
-              Computer Science senior at the University of Houston. I build full-stack
+              Computer Science undergraduate at the University of Houston. I build full-stack
               applications, and I spend my days reconciling real inventory data — {" "}
               <span className="text-fg">8,000+ SKUs a project at 97%+ accuracy</span>.
             </motion.p>
@@ -137,7 +137,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-[1.75rem] border border-line bg-raised">
               <img
                 src={portrait}
-                alt={`${profile.name}, Computer Science senior at the University of Houston`}
+                alt={`${profile.name}, Computer Science undergraduate at the University of Houston`}
                 width={640}
                 height={640}
                 className="aspect-square w-full max-w-full object-cover"
@@ -154,7 +154,7 @@ export function Hero() {
 
             <div className="mt-4 flex items-center justify-between font-mono text-eyebrow uppercase text-muted">
               <span>{profile.role}</span>
-              <span className="text-accent-soft">UH &apos;26</span>
+              <span className="text-accent-soft">UH &apos;27</span>
             </div>
           </motion.div>
         </div>

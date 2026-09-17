@@ -7,7 +7,10 @@ export const profile = {
   name: "Rahul Sunil",
   firstName: "Rahul",
   role: "Associate Consultant at OFS Inventory",
-  tagline: "Computer Science senior building full-stack products and AI workflows.",
+  tagline: "Computer Science undergraduate building full-stack products and AI workflows.",
+  /** Shown in the hero badge and the Contact heading. */
+  seeking: "Open to Summer 2027 internships & new-grad roles",
+  graduation: "December 2027",
   location: "Houston, TX",
   relocation: "Open to relocation",
   email: "rahulsunilkwt147@gmail.com",
@@ -19,7 +22,7 @@ export const profile = {
   githubLabel: "rahulkwt",
   resume: "Rahul_Sunil_Resume.pdf",
   summary:
-    "Hello, I'm Rahul! I'm a senior at the University of Houston, majoring in Computer Science. I enjoy building full-stack applications and exploring how AI can make everyday workflows easier. Always happy to connect with others in data, tech, or software.",
+    "Hello, I'm Rahul! I'm studying Computer Science at the University of Houston. I enjoy building full-stack applications and exploring how AI can make everyday workflows easier. Always happy to connect with others in data, tech, or software.",
 } as const
 
 export const education = [
@@ -28,7 +31,7 @@ export const education = [
     credential: "B.S. Computer Science",
     detail: "College of Natural Sciences and Mathematics",
     location: "Houston, TX",
-    period: "Aug 2024 — Dec 2026 (expected)",
+    period: "Dec 2027 (expected)",
     coursework: [
       "Data Structures",
       "Algorithms",
@@ -42,7 +45,7 @@ export const education = [
     credential: "Pre-transfer coursework",
     detail: "Completed core requirements before transferring to UH",
     location: "Houston, TX",
-    period: "2022 — 2024",
+    period: "",
     coursework: [],
   },
 ] as const
@@ -52,7 +55,7 @@ export const metrics = [
   { value: "8,000+", label: "SKUs reconciled per audit" },
   { value: "97%+", label: "Physical count accuracy" },
   { value: "500+", label: "Products shipped to production" },
-  { value: "1st", label: "Place, Baymax hackathon" },
+  { value: "1st", label: "Place, Case Quest hackathon" },
 ] as const
 
 export const skillGroups = [
@@ -67,9 +70,9 @@ export const skillGroups = [
     items: ["React.js", "Node.js", "Tailwind CSS", "Bootstrap", "Sass"],
   },
   {
-    title: "Data",
+    title: "Data & Analysis",
     note: "Modelling and reporting",
-    items: ["MySQL", "Excel / VLOOKUP", "Power BI", "Data Reconciliation", "Inventory Control"],
+    items: ["MySQL", "VLOOKUP", "Power BI", "Data Reconciliation", "Inventory Control"],
   },
   {
     title: "Tools & Platforms",
@@ -100,7 +103,7 @@ export const experience = [
     company: "Raising Cane's Chicken Fingers",
     title: "Crew Trainer",
     location: "Missouri City, TX",
-    period: "Jan 2023 — Feb 2025",
+    period: "Jan 2024 — Jan 2026",
     current: false,
     summary:
       "Trained new crew and supported shift leadership in a high-throughput restaurant environment.",
@@ -154,7 +157,7 @@ export const projects = [
     period: "Fall 2025",
     award: "1st place — 10+ teams",
     description:
-      "An AI-powered student assistant that solves problems, summarises notes, and automates the admin around coursework.",
+      "An AI-powered assistant that solves problems, summarises notes, and automates the admin around coursework.",
     bullets: [
       "Integrated LLM-based question answering with step-by-step problem explanations.",
       "Designed automated n8n workflows that send email notifications and populate a calendar directly from a course syllabus.",
@@ -170,9 +173,9 @@ export const projects = [
     description:
       "A clinic management system covering five distinct user roles, from patient booking through to staff dashboards.",
     bullets: [
-      "Engineered a full-stack clinic system with 5 roles, role-specific dashboards, and automated appointment and patient notifications.",
-      "Designed a MySQL database with 15+ tables behind a RESTful Node.js backend.",
+      "Designed a MySQL database with 15+ tables behind a RESTful Node.js backend with API endpoints.",
       "Built a responsive React.js frontend styled with Tailwind CSS, wired end to end against the API.",
+      "Collaborated with a 4-member team using GitHub for version control and development setup.",
     ],
     stack: ["React.js", "Node.js", "MySQL", "Tailwind CSS", "GitHub"],
   },
@@ -197,7 +200,7 @@ export const extracurricular = {
   role: "Youth Officer",
   period: "Aug 2023 — Present",
   detail:
-    "Youth Officer for 250 members, acting as the liaison between youth members and leadership. Led a 6-person marketing team across events and social media, growing attendance 40% from 2023 to 2025.",
+    "Youth Officer for 250 members, acting as the liaison between youth members and leadership. Led a 6-person marketing team across events and social media, growing attendance 40% year over year.",
 } as const
 
 export const navItems = [

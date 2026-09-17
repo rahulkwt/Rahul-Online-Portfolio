@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Nav } from "@/components/nav"
 import { Footer } from "@/components/footer"
 import { Hero } from "@/components/sections/hero"
@@ -9,6 +10,16 @@ import { Projects } from "@/components/sections/projects"
 import { Contact } from "@/components/sections/contact"
 
 export default function App() {
+  // Sections are client-rendered, so the browser's initial jump for a shared
+  // link like /#projects finds nothing and leaves the visitor on the hero.
+  // Re-run it once the sections exist.
+  useEffect(() => {
+    const id = window.location.hash.slice(1)
+    if (!id) return
+    const target = document.getElementById(id)
+    target?.scrollIntoView({ behavior: "auto", block: "start" })
+  }, [])
+
   return (
     <>
       <a

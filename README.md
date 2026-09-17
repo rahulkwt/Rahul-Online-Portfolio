@@ -1,7 +1,7 @@
 # Rahul Sunil — Portfolio
 
-Personal portfolio site for **Rahul Sunil** — Computer Science senior at the University of
-Houston and Associate Consultant at OFS Inventory.
+Personal portfolio site for **Rahul Sunil** — Computer Science undergraduate at the University
+of Houston and Associate Consultant at OFS Inventory.
 
 **Live:** https://rahulkwt.github.io/Rahul-Online-Portfolio/
 
